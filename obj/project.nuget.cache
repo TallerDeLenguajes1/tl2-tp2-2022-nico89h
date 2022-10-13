@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8nEtvoBErJH+vfNrHDP2Y12MCPrXN6WtMQPrjdzjyAIuzXJhi8zWLK2IlO29xTJDK2EEAJM0+0kJBa75vaQZuA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\OneDrive\\Escritorio\\tl2-tp2-2022-nico89h\\tl2-tp2-2022-nico89h.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\nlog\\5.0.4\\nlog.5.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
