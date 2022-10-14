@@ -23,16 +23,20 @@ using tl2_tp2_2022_nico89h;
 //Console.WriteLine("Ingrese el curso al cual el alumno se va a inscribir :");
 //int curso = Int32.Parse(Console.ReadLine());
 
-Alumno alumnoIngreso= new Alumno(2, "agustina", "arroyo", 44523, 1);
+Alumno alumnoIngreso= new Alumno(2, "agustina", "arroyo", 44523, 0);
 
 Alumno copia = new Alumno(1, "nico", "leal", 1214412, 1);
 
-Alumno copiaDos = new Alumno(3, "jose", "rodriguez", 42534132, 1);
+Alumno copiaDos = new Alumno(3, "jose", "rodriguez", 42534132, 2);
 
 
 HelperArchivos.crearArchivos();
 //HelperArchivos.escribirArchivos();
-HelperArchivos.escribirAtletismo();
+HelperArchivos.agregarAlumno(alumnoIngreso);
+HelperArchivos.agregarAlumno(copia);
+HelperArchivos.agregarAlumno(copiaDos);
+
+HelperArchivos.escribirArchivos();
 /*
  3) Contexto
 Un Instituto de Educación Física dicta 3 cursos distintos: “Atletismo”, “Voley” y “Futbol”. Cada

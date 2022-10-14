@@ -155,12 +155,13 @@ namespace tl2_tp2_2022_nico89h
                 
             }
         }
-        static public void escribirAtletismo()
+        static private void escribirAtletismo()
         {
             try
             {
                 FileStream archivo = new FileStream(atletismo, FileMode.Open);
                 StreamWriter escribir = new StreamWriter(archivo);
+               
                 //int id, string nombre, string apellido, int dni, int curso
                 foreach (Alumno item in HelperArchivos.listadoAlumnos)
                 {
@@ -204,6 +205,100 @@ namespace tl2_tp2_2022_nico89h
             }
         }
 
+        static public void leerArchivos()
+        {
+            try
+            {
+                HelperArchivos.leerAtletismo();
+                HelperArchivos.leerVoley();
+                HelperArchivos.leerFutbol();
+            }
+            catch (Exception ex)
+            {
 
+                throw;
+            }
+        }
+        static private void leerVoley()
+        {
+            try
+            {
+                //FileStream archivo = new FileStream(voley, FileMode.Open);
+                //StreamReader leer= new StreamReader(archivo);
+                //string datos= leer.ReadToEnd();
+                
+                string[] alumnos = File.ReadAllLines(voley);
+                
+                foreach (string item in alumnos)
+                {
+                    string[] datos = item.Split(',');
+                    Console.WriteLine("Dato del aumno: ");
+                    Console.WriteLine("Id: ", datos[0]);
+                    Console.WriteLine("Nombre: ", datos[1]);
+                    Console.WriteLine("Apellido: ", datos[2]);
+                    Console.WriteLine("DNI: ", datos[3]);
+                    Console.WriteLine("Curso: ", datos[4]);
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error("No se pudo leer el archivo de voley"+ ex.Message);
+
+            }
+        }
+        static private void leerFutbol()
+        {
+            try
+            {
+                //FileStream archivo = new FileStream(voley, FileMode.Open);
+                //StreamReader leer= new StreamReader(archivo);
+                //string datos= leer.ReadToEnd();
+
+                string[] alumnos = File.ReadAllLines(futbol);
+
+                foreach (string item in alumnos)
+                {
+                    string[] datos = item.Split(',');
+                    Console.WriteLine("Dato del aumno: ");
+                    Console.WriteLine("Id: ", datos[0]);
+                    Console.WriteLine("Nombre: ", datos[1]);
+                    Console.WriteLine("Apellido: ", datos[2]);
+                    Console.WriteLine("DNI: ", datos[3]);
+                    Console.WriteLine("Curso: ", datos[4]);
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error("No se pudo leer el archivo de futbol" + ex.Message);
+
+            }
+        }
+        static private void leerAtletismo()
+        {
+            try
+            {
+                //FileStream archivo = new FileStream(voley, FileMode.Open);
+                //StreamReader leer= new StreamReader(archivo);
+                //string datos= leer.ReadToEnd();
+
+                string[] alumnos = File.ReadAllLines(atletismo);
+
+                foreach (string item in alumnos)
+                {
+                    string[] datos = item.Split(',');
+                    Console.WriteLine("Dato del aumno: ");
+                    Console.WriteLine("Id: ", datos[0]);
+                    Console.WriteLine("Nombre: ", datos[1]);
+                    Console.WriteLine("Apellido: ", datos[2]);
+                    Console.WriteLine("DNI: ", datos[3]);
+                    Console.WriteLine("Curso: ", datos[4]);
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.Error("No se pudo leer el archivo de atletismo" + ex.Message);
+
+            }
+        }
     }
 }
