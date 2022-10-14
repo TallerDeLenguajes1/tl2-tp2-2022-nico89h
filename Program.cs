@@ -4,28 +4,36 @@ Console.WriteLine("Hello, World!");
 Logger control = LogManager.GetCurrentClassLogger();
 control.Info("Jose");
 /*
- 3) Implementar la solución del siguiente programa usando Try Catch para capturar los posibles
-errores.
-Escribir la declaración de una clase que almacene información de un empleado: Datos
-personales, Dirección, fecha de ingreso la empresa, datos profesionales.
-a) La clase empleado deberá calcular la antigüedad en la empresa, la edad del
-empleado y el salario. Este se calcula de acuerdo a la fórmula: Salario = Sueldo
-Básico + Adicional – Descuento
-Descuento = 15 % del Sueldo Básico.
-Adicional = 1 % del sueldo básico por cada año de antigüedad.
-1 año__________________________ 1%
-Página 1
-Taller de Lenguajes II – 2022
-Programador Universitario / Licenciatura en informática / Ingeniería en Informática
-Trabajo Práctico N° 1
-2 años_________________________ 2%
-15 años_________________________ 1 5%
-> 20 años________________________ 25% (a partir de 20 años se fija en 25%)
-b) Modifica luego la clase de tal manera que puedas suministrar la información:
-i) Si es casado, la cantidad de hijos.
-ii) Si es divorciado, la fecha de su divorcio.
-iii) Si tiene título universitario, el título y la universidad que impartió el título.
-c) Permite el ingreso de N trabajadores
-d) Muestra en una lista los datos: Apellido y Nombre, Edad, Antigüedad y Salario de los
-trabajadores ingresados
+ 3) Contexto
+Un Instituto de Educación Física dicta 3 cursos distintos: “Atletismo”, “Voley” y “Futbol”. Cada
+profesor, de cada curso, quiere tener un listado en un archivo .csv de los alumnos inscriptos en
+su curso.
+Tarea
+Deberá desarrollar un sistema que lleve el listado de todos los alumnos inscriptos por curso, esta
+información quedará registrada en un archivo csv.
+De esta forma cada curso contará con 1 archivo independiente, los nombres de los archivos de
+salida serán:
+Atletismo.csv
+Voley.csv
+Futbol.csv
+Crear una clase estática HelperDeArchivos , en la cual se van a cargar 2 métodos, uno para
+escribir contenido en el archivo y otro para limpiar el contenido actual del archivo.
+De los alumnos son importantes los siguientes datos:
+Apellido, Nombre, Dni, Id, Curso.
+class Alumno
+{
+private int Id { get; set; }
+private string Nombre { get; set; }
+private string Apellido { get; set; }
+private int Dni { get; set; }
+public int Curso { get; set; }
+}
+i) Cree una interfaz para ingresar los datos del alumno y el deporte al cual se inscribirán.
+ii) Incorpore todos los ciclos try-catch y logs necesarios para contemplar todos los posibles
+errores que podrían suceder al ejecutar el sistema.
+iii) Incorpore también todos los logs que considere que podrían ser informativos para el
+desarrollador. Construya el archivos de configuración de NLog acorde a las siguientes reglas:
+● Los mensajes de información se escriban en un archivo infoLog.log
+● Los mensajes de tipo debug se muestren por consola.
+● Todos los demás tipos de logs se escriben en el archivo appLog.log.
  */
