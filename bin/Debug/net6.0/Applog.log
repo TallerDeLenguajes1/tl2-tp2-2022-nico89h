@@ -1,0 +1,6 @@
+2022-10-14 11:20:55.3283|ERROR|tl2_tp2_2022_nico89h.HelperArchivos|No se pudo escribir el archivo de voley.csvThe process cannot access the file 'C:\Users\user\OneDrive\Escritorio\tl2-tp2-2022-nico89h\bin\Debug\net6.0\Voley.csv' because it is being used by another process.
+2022-10-14 11:20:56.5488|ERROR|tl2_tp2_2022_nico89h.HelperArchivos|No se pudo escribir el archivo de futbol.csvThe process cannot access the file 'C:\Users\user\OneDrive\Escritorio\tl2-tp2-2022-nico89h\bin\Debug\net6.0\Futbol.csv' because it is being used by another process.
+2022-10-14 11:20:56.5645|ERROR|tl2_tp2_2022_nico89h.HelperArchivos|No se pudo escribir el archivo de atletismo.csvThe process cannot access the file 'C:\Users\user\OneDrive\Escritorio\tl2-tp2-2022-nico89h\bin\Debug\net6.0\Atletismo.csv' because it is being used by another process.
+2022-10-14 11:22:53.2891|INFO|tl2_tp2_2022_nico89h.HelperArchivos|El archivo futbol ya existe
+2022-10-14 11:22:53.3479|INFO|tl2_tp2_2022_nico89h.HelperArchivos|El archivo atletismo ya existe
+2022-10-14 11:22:53.3505|INFO|tl2_tp2_2022_nico89h.HelperArchivos|El archivo voley ya existe
