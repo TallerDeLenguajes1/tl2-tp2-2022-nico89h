@@ -1,13 +1,15 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using NLog;
 namespace tl2_tp2_2022_nico89h
 {
     internal class Alumno
     {
+        private Logger logger= LogManager.GetCurrentClassLogger();
         public int Id { get; set; }
         public string Nombre { get; set; }=String.Empty;
         public string Apellido { get; set; } = String.Empty;
@@ -28,6 +30,7 @@ namespace tl2_tp2_2022_nico89h
             this.Apellido = "";
             this.Nombre = "";
             this.Id = 0;
+            this.logger.Warn("Los atributos en la clase alumno estan vacios por defecto");
         }
         
         
@@ -35,12 +38,21 @@ namespace tl2_tp2_2022_nico89h
         
         public Alumno(int id, string nombre, string apellido, int dni, int curso)
         {
-            //añadir un log para avisar que pueden ser null los strings
-            Id = id;
-            Nombre = nombre;
-            Apellido = apellido;
-            Dni = dni;
-            Curso = curso;
+            try
+            {
+                //añadir un log para avisar que pueden ser null los strings
+                Id = id;
+                Nombre = nombre;
+                Apellido = apellido;
+                Dni = dni;
+                Curso = curso;
+            }
+            catch (TypeLoadException)
+            {
+                logger.Error("Los parametros enviados no tienen el mismo tipo");
+            }
+            
+            
         }
 
 
@@ -50,15 +62,19 @@ namespace tl2_tp2_2022_nico89h
 
         public int getId()
         {
-            return this.Id;
+            try
+            {
+
+                return this.Id;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+                logger.Error("No se pudo retornar el dato solicitado"+ ex.Message);
+            }
         }
 
-        public string datos()
-        {
-
-            return  this.Id + "," + this.Nombre + "," + this.Apellido + "," + this.Dni + "," + this.Curso;
-        }
-        //inicio de el getter y setter
+        
 
 
 

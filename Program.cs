@@ -30,13 +30,15 @@ Alumno copia = new Alumno(1, "nico", "leal", 1214412, 1);
 Alumno copiaDos = new Alumno(3, "jose", "rodriguez", 42534132, 2);
 
 
-HelperArchivos.crearArchivos();
 //HelperArchivos.escribirArchivos();
 HelperArchivos.agregarAlumno(alumnoIngreso);
 HelperArchivos.agregarAlumno(copia);
 HelperArchivos.agregarAlumno(copiaDos);
 
+//HelperArchivos.escribirArchivos();
+
 HelperArchivos.escribirArchivos();
+HelperArchivos.leerArchivos();
 /*
  3) Contexto
 Un Instituto de Educación Física dicta 3 cursos distintos: “Atletismo”, “Voley” y “Futbol”. Cada

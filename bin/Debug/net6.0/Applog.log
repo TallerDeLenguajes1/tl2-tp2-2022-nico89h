@@ -10,3 +10,13 @@
 2022-10-14 11:46:26.4528|INFO|tl2_tp2_2022_nico89h.HelperArchivos|El archivo futbol ya existe
 2022-10-14 11:46:26.4942|INFO|tl2_tp2_2022_nico89h.HelperArchivos|El archivo atletismo ya existe
 2022-10-14 11:46:26.4942|INFO|tl2_tp2_2022_nico89h.HelperArchivos|El archivo voley ya existe
+2022-10-14 12:07:58.9812|INFO|tl2_tp2_2022_nico89h.HelperArchivos|El archivo futbol ya existe
+2022-10-14 12:07:59.2288|INFO|tl2_tp2_2022_nico89h.HelperArchivos|El archivo atletismo ya existe
+2022-10-14 12:07:59.2288|INFO|tl2_tp2_2022_nico89h.HelperArchivos|El archivo voley ya existe
+2022-10-14 12:07:59.4140|ERROR|tl2_tp2_2022_nico89h.HelperArchivos|No se pudo leer el archivo de atletismoIndex was outside the bounds of the array.
+2022-10-14 12:14:02.2093|ERROR|tl2_tp2_2022_nico89h.HelperArchivos|No se pudo escribir el archivo de atletismo.csvThe process cannot access the file 'C:\Users\user\OneDrive\Escritorio\tl2-tp2-2022-nico89h\bin\Debug\net6.0\Atletismo.csv' because it is being used by another process.
+2022-10-14 12:14:30.2271|ERROR|tl2_tp2_2022_nico89h.HelperArchivos|No se pudo escribir el archivo de atletismo.csvThe process cannot access the file 'C:\Users\user\OneDrive\Escritorio\tl2-tp2-2022-nico89h\bin\Debug\net6.0\Atletismo.csv' because it is being used by another process.
+2022-10-14 12:34:37.6341|ERROR|tl2_tp2_2022_nico89h.HelperArchivos|No se pudo leer el archivo de atletismoIndex was outside the bounds of the array.
+2022-10-14 12:36:41.0231|ERROR|tl2_tp2_2022_nico89h.HelperArchivos|No se pudo leer el archivo de atletismoIndex was outside the bounds of the array.
+2022-10-14 12:37:16.6447|ERROR|tl2_tp2_2022_nico89h.HelperArchivos|No se pudo leer el archivo de atletismoIndex was outside the bounds of the array.
+2022-10-14 12:37:44.2284|ERROR|tl2_tp2_2022_nico89h.HelperArchivos|No se pudo leer el archivo de atletismoIndex was outside the bounds of the array.

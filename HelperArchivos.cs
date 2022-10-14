@@ -155,7 +155,7 @@ namespace tl2_tp2_2022_nico89h
                 
             }
         }
-        static private void escribirAtletismo()
+        static public void escribirAtletismo()
         {
             try
             {
@@ -209,40 +209,50 @@ namespace tl2_tp2_2022_nico89h
         {
             try
             {
+                Console.WriteLine("Archivo de atletismo");
                 HelperArchivos.leerAtletismo();
+                Console.WriteLine("Archivo de voley");
                 HelperArchivos.leerVoley();
+                Console.WriteLine("Archivo de futbol");
                 HelperArchivos.leerFutbol();
             }
             catch (Exception ex)
             {
-
-                throw;
+                logger.Fatal("No se pudieron leer los archivos" + ex.Message);
+                
             }
         }
         static private void leerVoley()
         {
             try
             {
-                //FileStream archivo = new FileStream(voley, FileMode.Open);
-                //StreamReader leer= new StreamReader(archivo);
-                //string datos= leer.ReadToEnd();
-                
-                string[] alumnos = File.ReadAllLines(voley);
-                
-                foreach (string item in alumnos)
+                //abro el archivo
+                StreamReader leer = new StreamReader(File.OpenRead(voley));
+
+                string todo = leer.ReadToEnd();
+                //Console.WriteLine("ise"+ todo);
+                todo = todo.Substring(0, todo.Length - 1);
+                string[] alumnos = todo.Split('\n');
+
+                //Console.WriteLine("DASD"+ alumnos[0]);
+                //Console.WriteLine("DASD" + alumnos[1]);
+                //Console.WriteLine("DASD" + alumnos[2]);
+                string[] datosDos;
+                for (int i = 0; i < alumnos.Length; i++)
                 {
-                    string[] datos = item.Split(',');
-                    Console.WriteLine("Dato del aumno: ");
-                    Console.WriteLine("Id: ", datos[0]);
-                    Console.WriteLine("Nombre: ", datos[1]);
-                    Console.WriteLine("Apellido: ", datos[2]);
-                    Console.WriteLine("DNI: ", datos[3]);
-                    Console.WriteLine("Curso: ", datos[4]);
+                    datosDos = alumnos[i].Split(',');
+                    Console.WriteLine("Datos del alumno con id: " + datosDos[0]);
+                    for (int d = 1; d < datosDos.Length; d++)
+                    {
+                        Console.WriteLine(datosDos[d]);
+                    }
+                    Console.WriteLine("\n");
                 }
+                leer.Close();
             }
             catch (Exception ex)
             {
-                logger.Error("No se pudo leer el archivo de voley"+ ex.Message);
+                logger.Error("No se pudo leer el archivo de voley" + ex.Message);
 
             }
         }
@@ -250,49 +260,63 @@ namespace tl2_tp2_2022_nico89h
         {
             try
             {
-                //FileStream archivo = new FileStream(voley, FileMode.Open);
-                //StreamReader leer= new StreamReader(archivo);
-                //string datos= leer.ReadToEnd();
+                //abro el archivo
+                StreamReader leer = new StreamReader(File.OpenRead(futbol));
 
-                string[] alumnos = File.ReadAllLines(futbol);
+                string todo = leer.ReadToEnd();
+                //Console.WriteLine("ise"+ todo);
+                todo = todo.Substring(0, todo.Length - 1);
+                string[] alumnos = todo.Split('\n');
 
-                foreach (string item in alumnos)
+                //Console.WriteLine("DASD"+ alumnos[0]);
+                //Console.WriteLine("DASD" + alumnos[1]);
+                //Console.WriteLine("DASD" + alumnos[2]);
+                string[] datosDos;
+                for (int i = 0; i < alumnos.Length; i++)
                 {
-                    string[] datos = item.Split(',');
-                    Console.WriteLine("Dato del aumno: ");
-                    Console.WriteLine("Id: ", datos[0]);
-                    Console.WriteLine("Nombre: ", datos[1]);
-                    Console.WriteLine("Apellido: ", datos[2]);
-                    Console.WriteLine("DNI: ", datos[3]);
-                    Console.WriteLine("Curso: ", datos[4]);
+                    datosDos = alumnos[i].Split(',');
+                    Console.WriteLine("Datos del alumno con id: " + datosDos[0]);
+                    for (int d = 1; d < datosDos.Length; d++)
+                    {
+                        Console.WriteLine(datosDos[d]);
+                    }
+                    Console.WriteLine("\n");
                 }
+                leer.Close();
             }
             catch (Exception ex)
             {
-                logger.Error("No se pudo leer el archivo de futbol" + ex.Message);
+                logger.Error("No se pudo leer el archivo de Futbol" + ex.Message);
 
             }
         }
-        static private void leerAtletismo()
+        static public void leerAtletismo()
         {
             try
             {
-                //FileStream archivo = new FileStream(voley, FileMode.Open);
-                //StreamReader leer= new StreamReader(archivo);
-                //string datos= leer.ReadToEnd();
+                //abro el archivo
+                StreamReader leer = new StreamReader(File.OpenRead(atletismo));
 
-                string[] alumnos = File.ReadAllLines(atletismo);
+                string todo = leer.ReadToEnd();
+                //Console.WriteLine("ise"+ todo);
+                todo=todo.Substring(0, todo.Length-1);
+                string []alumnos = todo.Split('\n');
 
-                foreach (string item in alumnos)
+                //Console.WriteLine("DASD"+ alumnos[0]);
+                //Console.WriteLine("DASD" + alumnos[1]);
+                //Console.WriteLine("DASD" + alumnos[2]);
+                string[] datosDos;
+                for (int i = 0; i < alumnos.Length; i++)
                 {
-                    string[] datos = item.Split(',');
-                    Console.WriteLine("Dato del aumno: ");
-                    Console.WriteLine("Id: ", datos[0]);
-                    Console.WriteLine("Nombre: ", datos[1]);
-                    Console.WriteLine("Apellido: ", datos[2]);
-                    Console.WriteLine("DNI: ", datos[3]);
-                    Console.WriteLine("Curso: ", datos[4]);
+                    datosDos = alumnos[i].Split(',');
+                    Console.WriteLine("Datos del alumno con id: "+ datosDos[0]);
+                    for (int d = 1; d < datosDos.Length; d++)
+                    {
+                        Console.WriteLine(datosDos[d]);
+                    }
+                    Console.WriteLine("\n");
                 }
+                leer.Close(); 
             }
             catch (Exception ex)
             {
@@ -300,5 +324,7 @@ namespace tl2_tp2_2022_nico89h
 
             }
         }
+        
+    
     }
 }
